@@ -1,0 +1,143 @@
+/* mobile */
+@media (max-width: 767px) {
+  /* .menu-mb {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 20%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    background-color: #000;
+  } */
+
+  .header-bars-mobile {
+    position: absolute;
+    left: 0%;
+    top: 4%;
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+  .header-container {
+    height: 60px;
+  }
+  .header-menu {
+    display: none;
+  }
+  .header-img-link {
+    padding: 0 0 0 40px;
+  }
+  .banner-container {
+    margin: 30px auto 0 auto;
+  }
+  .banner-container h2 {
+    font-size: 40px;
+    max-width: 100%;
+  }
+  .banner-container p {
+    display: none;
+  }
+  .banner {
+    height: 474px;
+  }
+  .banner-btn {
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+  }
+  /* About */
+  .about-container-item {
+    flex-direction: column;
+  }
+  .about-container h5 {
+    max-width: 100%;
+    padding: 0;
+  }
+  .about-container-left {
+    padding: 0;
+  }
+  .about-container-left img {
+    width: 100%;
+  }
+  .about-container-left p {
+    max-width: 100%;
+  }
+  .about-container-right {
+    max-width: 100%;
+  }
+  .about-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-row-item {
+    margin-bottom: 10px;
+  }
+  .services-container {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+/* table*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-bars-mobile {
+    position: absolute;
+    left: 0%;
+    top: 4%;
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+  .header-img-link {
+    padding: 0 0 0 40px;
+  }
+  .header {
+    background: #171717;
+  }
+  .header-menu {
+    display: none;
+  }
+  .header-container {
+    height: 60px;
+  }
+  /* banner */
+  .banner-container {
+    margin: 30px auto 0px auto;
+  }
+  .banner-container h2 {
+    max-width: 670px;
+    margin: 20px auto;
+    padding-top: 10px;
+  }
+  .banner-container p {
+    display: none;
+  }
+  /* About */
+  .about-container-item {
+    flex-direction: column;
+  }
+  .about-container h5 {
+    max-width: 100%;
+  }
+  .about-container-left img {
+    width: 100%;
+  }
+  .about-container-left p {
+    max-width: 100%;
+  }
+  .about-container-right {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  .about-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-row-item {
+    margin-bottom: 10px;
+  }
+}
+/* PC */
+@media (min-width: 1024px) {
+    .header-bars-mobile {
+        display: none;
+    }
+}
