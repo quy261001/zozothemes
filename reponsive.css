@@ -1,4 +1,20 @@
 /* mobile */
+@media (max-width: 480px) {
+  .menu {
+    width: 100%;
+  }
+  .banner-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }  
+}
+@media (max-width: 680px) {
+  .banner-container h2 {
+    font-size: 48px !important;
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 767px) {
   /* .menu-mb {
     position: absolute;
@@ -28,11 +44,12 @@
     padding: 0 0 0 40px;
   }
   .banner-container {
-    margin: 30px auto 0 auto;
+    margin: 60px auto 0 auto;
   }
   .banner-container h2 {
-    font-size: 40px;
+    font-size: 98px;
     max-width: 100%;
+    margin-top: 0;
   }
   .banner-container p {
     display: none;
@@ -100,15 +117,12 @@
   }
   /* banner */
   .banner-container {
-    margin: 30px auto 0px auto;
+    margin: 24px auto 0px auto;
   }
   .banner-container h2 {
     max-width: 670px;
     margin: 20px auto;
     padding-top: 10px;
-  }
-  .banner-container p {
-    display: none;
   }
   /* About */
   .about-container-item {

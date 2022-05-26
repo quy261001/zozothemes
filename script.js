@@ -9,7 +9,6 @@ window.addEventListener("scroll", () => {
   if (scrollY >= 100) {
     headerLink.forEach((item) => (item.style.color = "#333"));
     headerIcon.forEach((item) => (item.style.color = "#333"));
-    headerIconBarsMobile.style.color = "#000";
     header.style.background = "#fff";
     header.style.boxShadow = "0 0 2px rgb(0 0 0 / 10)";
     headerImg.setAttribute(
@@ -21,7 +20,7 @@ window.addEventListener("scroll", () => {
     headerLink.forEach((item) => (item.style.color = "#fff"));
     headerIcon.forEach((item) => (item.style.color = "#fff"));
     header.style.background = "transparent";
-    headerIconBars.style.borderColor = "rgba(255,255,255,.2";
+    headerIconBars.style.borderColor = "rgba(255,255,255,.2)";
     headerIconBarsMobile.style.color = "#fff";
     header.style.boxShadow = "none";
     headerImg.setAttribute(
@@ -63,6 +62,7 @@ headerIconBars.addEventListener("click", () => {
   menu.classList.toggle("menu-show");
   header.classList.toggle("menu-left");
   wrapper.classList.toggle("menu-left");
+ 
 });
 
 menuClose.addEventListener("click", () => {
@@ -103,10 +103,9 @@ const projectsNext = document.querySelector(".projects-next");
 const projectsPrev = document.querySelector(".projects-prev");
 const projectsItemWidth = projectsItem[1].offsetWidth;
 const projectsLength = projectsItem.length;
-console.log(projectsLength * projectsItemWidth);
-console.log(projectsItemWidth)
+
   let positionX = 0; 
-  index = 0;
+  index = 0;  
 projectsNext.addEventListener("click",  () => {
   handleChangeSlide(1);
 });
@@ -116,13 +115,33 @@ projectsPrev.addEventListener("click", () => {
 
 function handleChangeSlide(direction) {
   if (direction === 1) {
-    index++;
-    if (index > projectsLength - 3) return;
+    if (index > projectsLength - 4) {
+      index = projectsLength - 3;
+      return;
+    };
     positionX -= projectsItemWidth;
-    projectsContainer.style = `transform: translateX(${positionX}px)`
-    console.log(index);
+    projectsContainer.style = `transform: translateX(${positionX}px)`;
+    index++;
+   
+
   } else if (direction === -1) {
-    console.log("prev");
+    if (index <= 0) {
+      index = 0;
+      return;
+    }
+    positionX += projectsItemWidth;
+    projectsContainer.style = `transform: translateX(${positionX}px)`;
+    index--;
   }
 };
-
+// theme show
+const themeTitle = document.querySelector('.theme-title');
+const themeBtn = document.querySelector('.theme-btn');
+window.addEventListener("scroll", () => {
+  const scrollY = window.pageYOffset;
+  console.log(scrollY);
+  if (scrollY >= 2150) {
+    themeTitle.style.animation = "themeTitle 0.5s linear"
+    themeBtn.style.animation = "themeButton 0.5s linear"
+  }
+});
