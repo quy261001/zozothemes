@@ -101,45 +101,60 @@ const projectsContainer = document.querySelector(".projects-container");
 const projectsItem = document.querySelectorAll(".projects-item");
 const projectsNext = document.querySelector(".projects-next");
 const projectsPrev = document.querySelector(".projects-prev");
-const projectsItemWidth = projectsItem[1].offsetWidth;
-const projectsLength = projectsItem.length;
 
-  let positionX = 0; 
-  index = 0;  
-projectsNext.addEventListener("click",  () => {
-  handleChangeSlide(1);
-});
-projectsPrev.addEventListener("click", () => {
-  handleChangeSlide(-1);
-});
+document.addEventListener("DOMContentLoaded", function() {
+  make_slide(4)
+})
 
-function handleChangeSlide(direction) {
-  if (direction === 1) {
-    if (index > projectsLength - 4) {
-      index = projectsLength - 3;
-      return;
-    };
-    positionX -= projectsItemWidth;
-    projectsContainer.style = `transform: translateX(${positionX}px)`;
-    index++;
-   
+function make_slide(amountSlideAppear) {
+  const widthItemAndMargin = projectsContainer.offsetWidth / amountSlideAppear;
+  console.log(widthItemAndMargin);
+  let widthAllBox = widthItemAndMargin * projectsItem.length
+  
+}
 
-  } else if (direction === -1) {
-    if (index <= 0) {
-      index = 0;
-      return;
-    }
-    positionX += projectsItemWidth;
-    projectsContainer.style = `transform: translateX(${positionX}px)`;
-    index--;
-  }
-};
+
+
+
+
+// let counter = 0;
+// const size = projectsItem[0].clientWidth;
+// console.log(size);
+// projectsContainer.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+
+// projectsNext.addEventListener("click",  () => {
+//   if (counter >=  projectsItem.length - 5) return;
+//   projectsContainer.style.transition = "all 0.4s linear"
+//   counter++;
+//   console.log(counter);
+//   projectsContainer.style.transform = 'translateX(' + (-(size+30) * counter) +'px)';
+// });
+// projectsPrev.addEventListener("click", () => {
+//   projectsContainer.style.transition = "all 0.4s linear"
+//   counter--;
+//   projectsContainer.style.transform = 'translateX(' + (-(size+30) * counter) +'px)';
+// });
+
+// projectsContainer.addEventListener('transitionend', () => {
+//   if (projectsItem[counter].id === 'last-item') {
+//     projectsContainer.style.transition = "none";
+//     counter = projectsItem[counter].id === 'first-item';
+//     projectsContainer.style.transform = 'translateX(' + (-(size+30) * counter) +'px)';
+//   }
+//   if (projectsItem[counter].id === 'first-item') {
+//     projectsContainer.style.transition = "none";
+//     counter = projectsItem[4].id === 'last-item';
+//     projectsContainer.style.transform = 'translateX(' + (-(size+30) * counter) +'px)';
+//   }
+// })
+
+
 // theme show
 const themeTitle = document.querySelector('.theme-title');
 const themeBtn = document.querySelector('.theme-btn');
 window.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset;
-  console.log(scrollY);
   if (scrollY >= 2150) {
     themeTitle.style.animation = "themeTitle 0.5s linear"
     themeBtn.style.animation = "themeButton 0.5s linear"
