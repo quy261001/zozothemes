@@ -42,13 +42,17 @@
     top: 4%;
     padding: 12px 20px;
     font-size: 20px;
+    cursor: pointer;
+  }
+  .header-bars-mobile svg {
+    pointer-events: none;
   }
   .menu-mb {
     position: fixed;
     z-index: 9998;
     padding: 0 20px;
     top: 0;
-    left: -150%;
+    left: -700%;
     margin: 0;
     background-color: #222;
     width: 350px;
@@ -202,6 +206,7 @@
   }
   .footer-item-input input {
     width: 100%;
+    color: #fff;
   }
 }
 

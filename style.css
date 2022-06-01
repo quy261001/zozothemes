@@ -70,7 +70,12 @@ h3 {
   transition: all 0.3s ease-in-out;
   overflow-x: hidden;
 }
-
+body {
+  overflow-y: scroll;
+}
+/* body::-webkit-scrollbar {
+  display: none;
+} */
 /* Menu */
 .menu {
   position: fixed;
@@ -978,7 +983,9 @@ h3 {
   text-align: center;
   margin: 0 auto 70px auto;
 }
-
+.projects-content p {
+  padding: 0 15px;
+}
 .projects-content p::after {
   position: absolute;
   content: "";
@@ -1364,6 +1371,7 @@ h3 {
   background: transparent;
   transition: 0.25s linear;
   width: 217px;
+  color: #fff;
 }
 .footer-item-input input:focus {
   border: 1px solid #7c7c7c;
